@@ -3,5 +3,3 @@ describe('<Home />', () => {
     expect(1).toBe(1);
   });
 });
-
-

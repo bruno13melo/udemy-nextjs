@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from '@testing-library/react';
 
 import { Posts } from '.';
 
@@ -22,8 +22,8 @@ const props = {
       body: 'body 3',
       cover: 'img/img3.png',
     },
-  ]
-}
+  ],
+};
 
 describe('<Posts />', () => {
   it('should render posts', () => {
@@ -40,11 +40,8 @@ describe('<Posts />', () => {
     expect(screen.queryByRole('heading', { name: /title/i })).not.toBeInTheDocument();
   });
 
-
   it('should match snapshot', () => {
     const { container } = render(<Posts {...props} />);
     expect(container.firstChild).toMatchSnapshot();
   });
-
-
 });
